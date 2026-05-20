@@ -25,6 +25,8 @@
 
 package edu.teamrocket.ricksyBusiness;
 
+import edu.teamrocket.ricksyBusiness.dispatcher.*;
+
 public class RicksyBusiness {
     
     public static void main(String[] args) {

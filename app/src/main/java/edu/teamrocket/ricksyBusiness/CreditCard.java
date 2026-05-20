@@ -13,7 +13,9 @@ public class CreditCard {
     }
 
     public boolean pay(double cost) {
-        return credit >= cost ? true : false;
+        boolean canPay = credit >= cost ? true : false;
+        credit -= canPay ? cost : 0;
+        return canPay;
     }
 
     public String number() {
