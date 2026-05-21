@@ -22,7 +22,7 @@ public class UfosPark implements GuestDispatcher {
         boolean isEmpty = false;
         int position = 0;
         String key = "";
-        while (!isEmpty) {
+        while (!isEmpty && position < ufosKeys.size()) {
             String ufo = ufosKeys.stream().toList().get(position);
             if (flota.get(ufo) == null) {
                 key = ufo;
