@@ -1,15 +1,15 @@
-package edu.teamrocket.ricksyBusiness;
+package edu.teamrocket.ricksybusiness;
 
 public class CreditCard {
 
     private String owner;
     private String number;
-    private double credit;
+    private double credit = 3000;
     private final String SYMBOL;
 
-    CreditCard(String owner, String symbol) {
+    public CreditCard(String owner, String SYMBOL) {
         this.owner = owner;
-        this.SYMBOL = symbol;
+        this.SYMBOL = SYMBOL;
     }
 
     public boolean pay(double cost) {
@@ -29,7 +29,7 @@ public class CreditCard {
     @Override
     public String toString() {
         return """
-                Owner: %s | Number: %s | Symbol: %s | Credit: %d
+                Owner: %s | Number: %s | Symbol: %s | Credit: %f
                 """.formatted(this.owner, this.number(), this.SYMBOL, this.credit());
     }
 }   
