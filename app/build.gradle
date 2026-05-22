@@ -38,12 +38,12 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'edu.teamrocket.ricksyBusiness.ricksyBusiness'
+    mainClass = 'edu.teamrocket.ricksybusiness.RicksyBusiness'
 }
 
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Main-Class' : 'edu.teamrocket.ricksyBusiness.ricksyBusiness',
+        attributes 'Main-Class' : 'edu.teamrocket.ricksybusiness.RicksyBusiness',
                    'Package-Title' : 'Stockx-kata',
                    'Package-Version': '1.0-SNAPSHOT',
                    'Specification-Title' : 'Ejercicio programacion'

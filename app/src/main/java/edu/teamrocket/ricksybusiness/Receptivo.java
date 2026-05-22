@@ -1,27 +1,24 @@
 package edu.teamrocket.ricksybusiness;
 
 import edu.teamrocket.ricksybusiness.dispatcher.GuestDispatcher;
-import edu.teamrocket.ricksybusiness.CreditCard;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Receptivo {
-    private GuestDispatcher dispatcher;
-    private CreditCard creditCard;
+    
+    Set<GuestDispatcher> receptivo = new LinkedHashSet<>();
 
     Receptivo() {};
 
     void registra(GuestDispatcher dispatcher) {
-        this.dispatcher = dispatcher;
+        this.receptivo.add(dispatcher);
     }
 
     void dispatch(CreditCard creditCard) {
-        this.creditCard = creditCard;
+        for (GuestDispatcher dispatcher : receptivo) {
+            dispatcher.dispatch(creditCard);
+        }
     }
 
-    GuestDispatcher getDispatcher() {
-        return this.dispatcher;
-    }
-
-    CreditCard getCreditCard() {
-        return this.creditCard;
-    }
 }

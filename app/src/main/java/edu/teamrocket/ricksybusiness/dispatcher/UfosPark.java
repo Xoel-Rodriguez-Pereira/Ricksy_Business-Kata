@@ -17,13 +17,11 @@ public class UfosPark implements GuestDispatcher {
     @Override
     public void dispatch(CreditCard creditCard) {
         boolean isEmpty = this.flota.values().stream()
-                                    .filter(value -> value == "")
-                                    .findFirst()
-                                    .isEmpty();
+                                    .anyMatch(value -> value.equals(""));
 
         if (isEmpty && creditCard.credit() >= fee) {
             String ufo = this.flota.entrySet().stream()
-                                    .filter(entry -> entry.getValue() == "")
+                                    .filter(entry -> entry.getValue().equals(""))
                                     .findFirst()
                                     .map(Map.Entry::getKey)
                                     .toString();

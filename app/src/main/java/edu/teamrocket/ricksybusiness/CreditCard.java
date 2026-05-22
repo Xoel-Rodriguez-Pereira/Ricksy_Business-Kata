@@ -5,11 +5,11 @@ public class CreditCard {
     private String owner;
     private String number;
     private double credit = 3000;
-    private final String SYMBOL;
+
 
     public CreditCard(String owner, String SYMBOL) {
         this.owner = owner;
-        this.SYMBOL = SYMBOL;
+        this.number = SYMBOL;
     }
 
     public boolean pay(double cost) {
@@ -29,7 +29,7 @@ public class CreditCard {
     @Override
     public String toString() {
         return """
-                Owner: %s | Number: %s | Symbol: %s | Credit: %f
-                """.formatted(this.owner, this.number(), this.SYMBOL, this.credit());
+                Owner: %s | Number: %s | Credit: %f
+                """.formatted(this.owner, this.number(), this.credit());
     }
 }   
